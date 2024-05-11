@@ -32,13 +32,11 @@
     <ul>
         <li><code>print_info "INFO" "Potential Groups:</code>: This function prints information to the console with an "INFO" tag.</li>
         <li><code>$(stat /*/*/* 2&gt;/dev/null | grep 'Gid:' | awk '{print $5,$6}' | tr ',' '\n' | sort -u)</code>: This command sequence retrieves group permissions across the file system.
-            <ul>
-                <li><code>stat /*/*/*</code>: Retrieves information about files and directories in the specified path.</li>
-                <li><code>grep 'Gid:'</code>: Filters the output to lines containing the group ID information.</li>
-                <li><code>awk '{print $5,$6}'</code>: Selects and prints the fifth and sixth columns, which represent the numeric group ID and group name, respectively.</li>
-                <li><code>tr ',' '\n'</code>: Translates commas to newlines to separate multiple groups.</li>
-                <li><code>sort -u</code>: Sorts the output alphabetically and removes duplicates.</li>
-            </ul>
+        <li><code>stat /*/*/*</code>: Retrieves information about files and directories in the specified path.</li>
+        <li><code>grep 'Gid:'</code>: Filters the output to lines containing the group ID information.</li>
+        <li><code>awk '{print $5,$6}'</code>: Selects and prints the fifth and sixth columns, which represent the numeric group ID and group name, respectively.</li>
+        <li><code>tr ',' '\n'</code>: Translates commas to newlines to separate multiple groups.</li>
+        <li><code>sort -u</code>: Sorts the output alphabetically and removes duplicates.</li>
         </li>
     </ul>
     <h2>Checking for Executable Permission Files</h2>
@@ -47,10 +45,8 @@
     <ul>
         <li><code>print_info "INFO" "Potential Executable Files:</code>: This function prints information to the console with an "INFO" tag.</li>
         <li><code>$(find / -type f -executable 2&gt;/dev/null)</code>: This command searches for executable files starting from the root directory.
-            <ul>
-                <li><code>find / -type f -executable</code>: Searches for files starting from the root directory ("/") that have executable permission set.</li>
-                <li><code>2&gt;/dev/null</code>: Redirects error messages to /dev/null to suppress them.</li>
-            </ul>
+        <li><code>find / -type f -executable</code>: Searches for files starting from the root directory ("/") that have executable permission set.</li>
+        <li><code>2&gt;/dev/null</code>: Redirects error messages to /dev/null to suppress them.</li>
         </li>
     </ul>
 
@@ -59,6 +55,17 @@
     <pre><code class="language-bash">print_info "INFO" "SUID bit on"
 find /*/*/* -type f \( -perm -4000 -o -perm -2000 \) -exec ls -l {} + 2&gt;/dev/null
 </code></pre>
+    
+    <h2>Non-Standard Enumeration</h2>
+    <p>While the above examples demonstrate effective enumeration using standard Linux commands, there are alternative approaches that may offer additional insights. One such method involves tapping into less conventional techniques or custom scripts tailored to specific environments. I highly recommend checking out <a href="https://gtfobins.github.io/">GTFOBins</a> for way more examples and techniques:</p>
+
+    <h2>Conclusion</h2>
+    <p>For offensive security professionals, mastering the art of living off the land in a Linux environment is about strategy, stealth, and adaptability. By blending into the native landscape of the operating system, offensive security pros can conduct reconnaissance, privilege escalation, and lateral movement more saliently, evading detection and achieving their objectives. Armed with a deep understanding of Linux internals and some creative techniques, offensive security pros can navigate the digital environments with confidence.</p>
 </article>
 </body>
+    <footer>
+    <div class="centered">
+        <p>&copy; 2024 Living Off the Land - The SiRyiS Blog</p>
+    </div>
+</footer>
 </html>
