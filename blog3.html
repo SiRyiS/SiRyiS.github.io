@@ -3,23 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Post 3 - Under Construction</title>
+    <title>OSINT</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Under Construction</h1>
+        <h1>Exploring OSINT: The Digital Footprints</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="bots-and-scrapers.html">Bots and Scrapers</a></li>
+                <li><a href="living-off-the-land.html">Living Off the Land</a></li>
             </ul>
         </nav>
     </header>
+<article>
+    <p>Information and intelligence is king and Open Source Intelligence (OSINT) serves as a key tool for gathering actionable intelligence about potential targets. Lets explore a systematic approach to OSINT, using a hypothetical scenario involving a corporate entity, "FakeSecureTech". We will dive into various high level parts of OSINT, detailing some of the tools and tactics employed at each stage.</p>
+    <p>First, it is also important to note that when conducting OSINT, it is important to understand the legal boundaries and permissions required for various activities. Gathering information from public sources such as social networks or company websites is legal, as it involves open source information readily available to the public. However, more intrusive activities like directory or subdomain brute forcing are illegal without explicit permission from the target organization, as these actions involve active scanning and enumeration, which can be considered unauthorized access. Similarly, using third party services that perform active scanning without consent from the target is also illegal. On the other hand, passive techniques like reviewing certificate transparency logs or utilizing third party data aggregators that collect information without direct interaction with the target typically remain within legal boundaries. Understanding these distinctions is vital to ensure compliance with legal standards while conducting OSINT. Now, lets do some hypothetical OSINT against our corporate entity, "FakeSecureTech".</p>
 
-    <article>
-        <h2>Under Construction</h2>
-        <p>Coming Soon!</p>
-    </article>
-    <img src="77fLP.gif" alt="waiting vectorman GIF" width="500" style="display: block; margin: 0 auto;">
+    <h2>Understanding the Target</h2>
+    <p>FakeSecureTech is our hypothetical organization. To start gathering intel and conduct reconnaissance, we start by gathering foundational details:</p>
+    
+	<h2>Organization Information</h2>
+    <p>The initial step involves visiting FakeSecureTech website. The home page, "About Us" section, and social media links provide initial insights into their corporate structure, key personnel, and organizational hierarchy. Advanced search operators on platforms like Google can reveal deeper information, such as press releases, blog posts, and news articles.</p>
+	
+	<h2>Social Networks and Search Engines</h2>
+    <p>Leveraging platforms such as LinkedIn, Facebook, and Twitter, we gain insights into FakeSecureTech employees, their roles, and professional networks. We use search engines and tools like Google Maps, Google Earth, and Street View to map FakeSecureTech global footprint, uncovering details about their physical locations, including addresses and office layouts.</p>
+
+	<h2>Social Networks and Search Engines</h2>
+    <p>Leveraging platforms such as LinkedIn, Facebook, and Twitter, we gain insights into FakeSecureTech employees, their roles, and professional networks. We use search engines and tools like Google Maps, Google Earth, and Street View to map FakeSecureTech global footprint, uncovering details about their physical locations, including addresses and office layouts.</p>
+
+	<h1>Probing Infrastructure and Security</h1>
+	<h2>Domain and Web Infrastructure</h2>
+	<p>Thorough analysis of FakeSecureTech domain registrations, subdomains, and IP addresses using tools like whois, dig, and DNSdumpster uncovers critical technical details. Tools such as sublister and ffuf are used to enumerate subdomains. Additionally, Shodan, a powerful search engine for Internet connected devices, provides insights into exposed devices and services linked to FakeSecureTech IP addresses, revealing potential vulnerabilities and misconfigurations. We also utilize services like Censys to further identify exposed devices and services.</p>
+	
+	<h2>Cloud Infrastructure</h2>
+	<p>Probing cloud service providers like AWS, GCP, and Azure for misconfigurations or exposed resources is crucial. We use tools like ip2provider.py to identify cloud providers based on IP addresses and GreyHatWarfare to search for exposed S3 buckets.</p>
+	
+	<h1>Potential Leaks and Vulnerabilities</h1>
+	<h2>Data Breach Exploration</h2>
+	<p>Investigating databases like Dehashed and HaveIBeenPwned for any historical data breaches linked to FakeSecureTech can reveal compromised credentials or sensitive information leaks. Tools like h8mail can be employed to cross reference leaked emails and passwords with known breach data.</p>
+	
+	<h2>Metadata and File Analysis</h2>
+	<p>Examining available files for metadata using tools like exiftool can uncover hidden details about document authors, creation dates, and editing history. Google Dorking, a method of using advanced search queries to uncover sensitive information, is also employed to find publicly accessible files and directories.</p>
+	
+	<h1>Tactical Advantages Through OSINT</h1>
+	<h2>Strategic Insights and Ethical Considerations</h2>
+	<p>By aggregating data from social networks, search engines, and domain records, we construct a comprehensive profile of FakeSecureTech. This approach not only enhances our understanding of their business operations but also identifies potential attack vectors and security gaps. Tools like BuiltWith help us understand the technology stack employed by FakeSecureTech. Throughout the investigative process, it is imperative to conduct OSINT ethically, adhering strictly to privacy regulations and ethical guidelines.</p>
+	
+	<h2>Conclusion</h2>
+	<p>OSINT stands as an indispensable tool for proactive threat research and intelligence. By employing technical methodologies to gather and analyze digital footprints, security professionals can effectively fortify organizations like FakeSecureTech against evolving cyber threats. This strategic approach ensures a structured gathering of actionable insights while upholding stringent ethical standards, thereby safeguarding against potential vulnerabilities and mitigating risks effectively.</p>
+
+	<p>If you want to explore more you can find the methodology template here:<a href="https://github.com/SiRyiS/osint/blob/main/osint_flow.md"> OSINT Flow</a></p>
+
+</article>
 </body>
+    <footer>
+    <div class="centered">
+        <p>&copy; 2024 Exploring OSINT: The Digital Footprints - The SiRyiS Blog</p>
+    </div>
+</footer>
 </html>
